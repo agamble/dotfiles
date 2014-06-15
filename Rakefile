@@ -269,6 +269,8 @@ def install_prezto
   run %{ mkdir -p $HOME/.zsh.after }
   run %{ mkdir -p $HOME/.zsh.prompts }
 
+  run %{ echo 'for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file' > ~/.zshrc }
+
   if ENV["SHELL"].include? 'zsh' then
     puts "Zsh is already configured as your shell of choice. Restart your session to load the new settings"
   else
@@ -313,15 +315,6 @@ def file_operation(files, method = :symlink)
       run %{ ln -nfs "#{source}" "#{target}" }
     else
       run %{ cp -f "#{source}" "#{target}" }
-    end
-
-    # Temporary solution until we find a way to allow customization
-    # This modifies zshrc to load all of yadr's zsh extensions.
-    # Eventually yadr's zsh extensions should be ported to prezto modules.
-    if file == 'zshrc'
-      File.open(target, 'a') do |zshrc|
-        zshrc.puts('for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file')
-      end
     end
 
     puts "=========================================================="
