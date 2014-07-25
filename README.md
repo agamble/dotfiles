@@ -7,8 +7,15 @@
 
     # Yet Another Dotfile Repo v1.1
     # Now with Prezto and Vundle!
+    # 
 
     sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
+
+## Alex's Changes
+
+  * Replaced prezto with oh-my-zsh and related theme
+  * Added custom shortcuts
+  * Changed Vim settings a bit
 
 **Always be sure to run `rake update` after pulling to ensure plugins are updated**
 

@@ -18,7 +18,6 @@ task :install => [:submodule_init, :submodules] do
   file_operation(Dir.glob('irb/*')) if want_to_install?('irb/pry configs (more colorful)')
   file_operation(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
   file_operation(Dir.glob('ctags/*')) if want_to_install?('ctags config (better js/ruby support)')
-  file_operation(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   file_operation(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
   if want_to_install?('vim configuration (highly recommended)')
     file_operation(Dir.glob('{vim,vimrc}'))
@@ -171,7 +170,7 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher}
+  run %{brew install zsh ctags git hub the_silver_searcher}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   puts
   puts
