@@ -125,3 +125,5 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[user]
+	email = alexander.gamble@outlook.com
