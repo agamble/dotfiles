@@ -127,3 +127,4 @@
   path = .gitconfig.user
 [user]
 	email = alexander.gamble@outlook.com
+	name = Alexander Gamble
