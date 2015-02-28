@@ -9,7 +9,7 @@
     # Now with Prezto and Vundle!
     # 
 
-    sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`"
+    sh -c "`curl -fsSL https://raw.github.com/agamble/dotfiles/master/install.sh`"
 
 ## Alex's Changes
 
