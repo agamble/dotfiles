@@ -4,6 +4,9 @@ ZSH=$HOME/.yadr/.oh-my-zsh
 # AutoJump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
+
+export EDITOR='vim'
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -17,9 +20,11 @@ alias pi='ssh -i ~/.ssh/pi pi@192.168.1.222'
 alias calsfl='ssh -i ~/.ssh/id_rsa root@calsfl.com'
 alias techsoc='ssh -i ~/.ssh/id_rsa dev@162.243.111.232'
 alias flaxman='ssh agamble@newgate.cs.ucl.ac.uk'
+alias azure='ssh agamble@rothko.cloudapp.net'
 alias dns='sudo killall -HUP mDNSResponder'
 alias s3='fakes3 -r /Users/alexander/workspace/tmp/s3 -p 4567'
 alias throw='git commit -am "new thing" && git push'
+alias cf='javac -cp ".;*"'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -57,7 +62,5 @@ plugins=(git osx nyan sublime virtualenvwrapper git-extras)
 
 source $ZSH/oh-my-zsh.sh
 
-# virtualenv fix
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
+# go
+export GOPATH=$HOME/workspace/go

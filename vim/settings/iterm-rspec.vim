@@ -1,4 +1,3 @@
-nnoremap ,rs :RunItermSpec<cr>
-nnoremap ,rl :RunItermSpecLine<cr>
-nnoremap ,ss :RunItermSpringSpec<cr>
-nnoremap ,sl :RunItermSpringSpecLine<cr>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
