@@ -4,7 +4,6 @@ ZSH=$HOME/.yadr/.oh-my-zsh
 # AutoJump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-
 export EDITOR='vim'
 
 # Set name of the theme to load.
